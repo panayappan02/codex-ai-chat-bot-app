@@ -39,6 +39,10 @@ body {
   scroll-behavior: smooth;
 }
 
+#chat_container.typing {
+  scroll-behavior: auto;
+}
+
 /* hides scrollbar */
 #chat_container::-webkit-scrollbar {
   display: none;

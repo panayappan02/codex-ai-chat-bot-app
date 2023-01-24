@@ -23,10 +23,15 @@ function typeText(element, text) {
 
   let interval = setInterval(() => {
     if (index < text.length) {
+      chatContainer.classList.add("typing");
+
       element.innerHTML += text.charAt(index);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
 
       index++;
     } else {
+      chatContainer.classList.remove("typing");
+
       clearInterval(interval);
     }
   }, 20);
